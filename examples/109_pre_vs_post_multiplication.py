@@ -13,4 +13,4 @@ X2 = R * T * S
 
 print(X1)
 print(X2)
-print(X1 == X2) # should not be the same!
+print(X1 != X2) # should not be the same!

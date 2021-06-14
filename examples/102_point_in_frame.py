@@ -19,8 +19,8 @@ F = Frame(point, xaxis, yaxis)  # coordinate system F
 P = Point(35., 35., 35.)  # point in F (local coordinates)
 
 P_ = F.to_world_coordinates(P)  # point in global (world) coordinates
-print("The point's world coordinates: {}".format(P_))
+print("The point's world coordinates: {!r}".format(P_))
 
 P2 = F.to_local_coordinates(P_)
-print("The point's local coordinates: {}".format(P2))  # should equal P
+print("The point's local coordinates: {!r}".format(P2))  # should equal P
 print(allclose(P2, P))

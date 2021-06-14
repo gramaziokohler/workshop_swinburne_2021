@@ -1,3 +1,5 @@
+"""Example: Create a rotation from a quaternion.
+"""
 from compas.geometry import Rotation
 from compas.geometry import Quaternion
 

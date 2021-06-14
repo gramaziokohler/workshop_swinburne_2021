@@ -12,6 +12,6 @@ P = Point(2, 2, 2)  # local point in F1
 T = Transformation.from_change_of_basis(F1, F2)
 
 # Represent geometry (=point P) in another coordinate frame
-print(P.transformed(T))
+print(repr(P.transformed(T)))
 # You can also use the following
-print(F2.to_local_coordinates(P))
+print(repr(F2.to_local_coordinates(P)))

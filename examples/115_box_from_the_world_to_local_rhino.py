@@ -16,10 +16,12 @@ box = Box(frame, width, length, height)
 F = Frame([2, 2, 2], [0.978, 0.010, -0.210], [0.090, 0.882, 0.463])
 
 # Get transformation between world and frame F
-# T = ...
+# Get transformation between frames
+T = Transformation.from_frame_to_frame(Frame.worldXY(), F)
 # Apply transformation on box.
-# box_transformed = ...
+box_transformed = box.transformed(T)
 print("Box frame transformed", box_transformed.frame)
+
 
 # create artists
 artist1 = FrameArtist(Frame.worldXY())
