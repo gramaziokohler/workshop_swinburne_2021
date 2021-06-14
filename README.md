@@ -64,8 +64,8 @@ Also install `python.app` after activating the environment:
     Yay! COMPAS is installed correctly!
 
     COMPAS: 1.6.3
-    Python: 3.8.8 | packaged by conda-forge | (default, Feb 20 2021, 15:50:08) [MSC v.1916 64 bit (AMD64)]
-    Extensions: ['compas-cgal', 'compas-fab', 'compas-slicer']
+    Python: 3.8.10 | packaged by conda-forge | (default, May 11 2021, 06:25:23) [MSC v.1916 64 bit (AMD64)]
+    Extensions: ['compas-fab', 'compas-slicer', 'compas-cgal', 'compas-rrc']
 
 ### Install on Rhino
 
