@@ -2,7 +2,7 @@ import os
 from compas.geometry import Frame
 from compas.robots import LocalPackageMeshLoader
 from compas.robots import RobotModel
-from compas_fab.robots import Configuration
+from compas.robots import Configuration
 
 from ur_kinematics import inverse_kinematics_ur5
 

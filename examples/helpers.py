@@ -8,12 +8,12 @@ from functools import partial
 import compas_rhino
 from compas_fab.robots import AttachedCollisionMesh
 from compas_fab.robots import CollisionMesh
-from compas_fab.robots import Configuration
 from compas_fab.robots import Tool
 
 import compas
 from compas.datastructures import Mesh
 from compas.geometry import Frame
+from compas.robots import Configuration
 from compas.topology import breadth_first_ordering
 from compas.topology import breadth_first_traverse
 from compas.utilities import color_to_colordict

@@ -4,7 +4,7 @@
 
 import math
 from compas.robots.model import Joint
-from compas_fab.robots import Configuration
+from compas.robots import Configuration
 
 print('Default constructor')
 print (Configuration([math.pi, 4], [Joint.REVOLUTE, Joint.PRISMATIC]))

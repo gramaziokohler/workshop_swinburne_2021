@@ -1,5 +1,5 @@
 # Rhino
-from compas_fab.robots import Configuration
+from compas.robots import Configuration
 from compas_rhino.artists import RobotModelArtist
 
 from compas.datastructures import Mesh

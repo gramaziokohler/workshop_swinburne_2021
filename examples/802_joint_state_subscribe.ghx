@@ -430,7 +430,7 @@ class ROSTopicSubscribe(component):
         self.is_subscribed = False
         self.msg_key = create_id(self, 'last_msg')
         key = create_id(self, 'topic')
-        
+
         topic = st.get(key, None)
         last_msg = st.get(self.msg_key, None)
 
@@ -439,7 +439,7 @@ class ROSTopicSubscribe(component):
                 if topic and topic.is_subscribed:
                     topic.unsubscribe()
                     time.sleep(0.2)
-    
+
                 topic = Topic(ros_client, topic_name, topic_type)
                 topic.subscribe(self.topic_callback)
                 st[key] = topic
@@ -983,7 +983,7 @@ class ROSTopicSubscribe(component):
                   <items count="12">
                     <item name="CodeInput" type_name="gh_string" type_code="10">import math
 from compas.robots import Joint
-from compas_fab.robots import Configuration
+from compas.robots import Configuration
 
 config = robot.zero_configuration()
 

@@ -1,11 +1,11 @@
 import os
 
 from compas_fab.backends import RosClient
-from compas_fab.robots import Configuration
 from compas_fab.robots import Tool
 
 from compas.datastructures import Mesh
 from compas.geometry import Frame
+from compas.robots import Configuration
 
 HERE = os.path.dirname(__file__)
 

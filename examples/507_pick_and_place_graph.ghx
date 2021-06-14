@@ -737,12 +737,12 @@ class RobotVisualize(component):
             frames = [draw_frame(f) for f in robot.transformed_frames(configuration, group)]
 
             visual = robot.artist.draw_visual()
-            
+
         scene_key = create_id(self, 'scene')
 
         if robot and (reload_scene or scene_key not in st):
             st[scene_key] = robot.client.get_planning_scene()
-        
+
         scene = st.get(scene_key, None)
 
         if scene:
@@ -756,23 +756,23 @@ class RobotVisualize(component):
                     cms = co.to_collision_meshes()
                     # HACK: Restore proper header
                     co.header = header
-                
+
                     for cm in cms:
                         if frame_id != '/world':
                             raise NotImplementedException('Only world-referenced collision meshes are supported')
-                
+
                         if cm.frame != Frame.worldXY():
                             t = Transformation.from_frame(cm.frame)
                             mesh = cm.mesh.transformed(t)
                         else:
                             mesh = cm.mesh
-                
+
                         rhino_mesh = MeshArtist(mesh).draw()
                         collision_meshes.append(rhino_mesh)
                 st[scene_key_co] = collision_meshes
 
             collision_meshes = st.get(scene_key_co, None)
-            
+
             for aco in scene.robot_state.attached_collision_objects:
                 for acm in aco.to_attached_collision_meshes():
                     frame_id = aco.object['header']['frame_id']
@@ -784,7 +784,7 @@ class RobotVisualize(component):
                         t = t * Transformation.from_frame(acm.collision_mesh.frame)
 
                     mesh = acm.collision_mesh.mesh.transformed(t)
-            
+
                     rhino_mesh = MeshArtist(mesh).draw()
                     attached_collision_meshes.append(rhino_mesh)
 
@@ -1341,7 +1341,7 @@ class InverseKinematics(component):
             except RosValidationError as e:
                 self.Message = 'No solution found'
                 raise
-        
+
         if configuration:
             self.Message = 'Solution found'
         return configuration
@@ -2516,7 +2516,7 @@ mesh = MeshArtist(brick).draw()</item>
               <chunks count="1">
                 <chunk name="Container">
                   <items count="13">
-                    <item name="CodeInput" type_name="gh_string" type_code="10">from compas_fab.robots import Configuration
+                    <item name="CodeInput" type_name="gh_string" type_code="10">from compas.robots import Configuration
 
 config = Configuration.from_revolute_values(j)</item>
                     <item name="Description" type_name="gh_string" type_code="10">GhPython provides a Python script component</item>
@@ -7219,7 +7219,7 @@ from compas.geometry import Frame
 from compas.geometry import Transformation
 from compas.geometry import Translation
 from compas_ghpython.artists import MeshArtist
-from compas_fab.robots import Configuration
+from compas.robots import Configuration
 from compas_fab.robots import PlanningScene
 from compas_fab.robots import AttachedCollisionMesh
 from compas_fab.robots import CollisionMesh
@@ -7235,10 +7235,10 @@ if assembly and robot and compute:
         start_configuration.values = assembly.pick_trajectory.points[-1].values
     except:
         pass
-    
+
     e = assembly.element(i)
     place_t0cf_frame, approach_t0cf_frame = robot.from_tcf_to_t0cf([e.frame, e.approach_frame])
-    
+
     # Apply place tolerance
     x, y, z = 0, 0, assembly.attributes['place_tolerance']
     place_t0cf_frame = place_t0cf_frame.transformed(Translation.from_vector([x, y, z]))
@@ -7275,7 +7275,7 @@ if assembly and robot and compute:
 
     if place_trajectory and place_trajectory.fraction &lt; 1.0:
         raise Exception('Incomplete trajectory. Fraction={}'.format(place_trajectory.fraction))
-    
+
     st[place_key] = place_trajectory
 
     # Merge and store

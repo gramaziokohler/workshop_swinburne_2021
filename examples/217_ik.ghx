@@ -528,7 +528,7 @@ artist = st[artist_key]
                 <chunk name="Container">
                   <items count="11">
                     <item name="CodeInput" type_name="gh_string" type_code="10">import math
-from compas_fab.robots import Configuration
+from compas.robots import Configuration
 
 config = Configuration.from_revolute_values([math.radians(a) for a in vals])
 </item>
