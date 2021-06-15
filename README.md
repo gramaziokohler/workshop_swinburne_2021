@@ -116,7 +116,34 @@
   * [Inverse Kinematics](examples/215_inverse_kinematics.py)
   * [Inverse Kinematics in Rhino](examples/216_inverse_kinematics_rhino.py)
   * [Inverse Kinematics in Grasshopper](examples/217_ik.ghx)
-  
+
+### ROS and MoveIt
+
+* ROS Basics
+  * [Verify connection](examples/301_check_connection.py)
+  * [Interconnected nodes: Listener](examples/302_ros_hello_world_listener.py)
+  * [Interconnected nodes: Talker in Grasshopper](examples/303_ros_hello_world_talker.ghx)
+  * [Interconnected nodes: Talker](examples/304_ros_hello_world_talker.py)
+
+* ROS & MoveIt planning with UR5
+  * [Load robot](examples/305_robot_from_ros.py)
+  * [Load robot in Rhino](examples/306_robot_from_ros_rhino.py)
+  * [Forward Kinematics](examples/307_forward_kinematics_ros_loader.py)
+  * [Inverse Kinematics](examples/308_inverse_kinematics_ros_loader.py)
+  * [Cartesian motion planning](examples/309_plan_cartesian_motion_ros_loader.py)
+  * [Cartesian motion planning + graphs](examples/310_plan_cartesian_motion_ros_loader_viz.py)
+  * [Free space motion planning](examples/311_plan_motion_ros_loader.py)
+  * [Free space motion planning + graphs](examples/312_plan_motion_ros_loader_viz.py)
+  * [Constraints](examples/313_constraints.py)
+
+* Planning scene in MoveIt
+  * [Add objects to the scene](examples/314_add_collision_mesh.py)
+  * [Append nested objects to the scene](examples/315_append_collision_meshes.py)
+  * [Remove objects from the scene](examples/316_remove_collision_mesh.py)
+
+* MoveIt & Grasshopper
+  * [Robot in Grasshopper](examples/317_robot_example.ghx)
+
 ## Requirements
 
 * Minimum OS: Windows 10 Pro or Mac OS Sierra 10.12

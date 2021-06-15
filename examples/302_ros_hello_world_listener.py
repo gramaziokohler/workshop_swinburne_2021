@@ -7,6 +7,8 @@ def receive_message(message):
     print('Received: ' + message['data'])
 
 with RosClient('localhost') as client:
+    print('Waiting for messages...')
+
     listener = Topic(client, '/messages', 'std_msgs/String')
     listener.subscribe(receive_message)
 
