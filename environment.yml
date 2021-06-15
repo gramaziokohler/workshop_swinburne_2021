@@ -6,9 +6,12 @@ dependencies:
    - python=3.8
    - pip
    - git
-   - compas>=1.7.1
-   - compas_fab>=0.19.1
+   - compas>=1.7
+   - compas_fab>=0.19
    - igl>=2.2.1
    - compas_cgal>=0.1.2
    - compas_rrc
    - compas_slicer
+   - pip:
+     - compas>=1.7.1
+     - compas_fab>=0.19.1
