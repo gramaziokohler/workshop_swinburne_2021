@@ -7232,7 +7232,7 @@ place_key = '{}_{}'.format('place_trajectory', ghenv.Component.InstanceGuid)
 if assembly and robot and compute:
     start_configuration = robot.zero_configuration()
     try:
-        start_configuration.values = assembly.pick_trajectory.points[-1].values
+        start_configuration.joint_values = assembly.pick_trajectory.points[-1].joint_values
     except:
         pass
 
@@ -7263,7 +7263,7 @@ if assembly and robot and compute:
     frames.append(place_t0cf_frame)
 
     start_configuration = robot.zero_configuration()
-    start_configuration.values = trajectory.points[-1].values
+    start_configuration.joint_values = trajectory.points[-1].joint_values
 
     place_trajectory = robot.plan_cartesian_motion(frames,
                                                    start_configuration,

@@ -1,6 +1,7 @@
 import os
 
 from compas_fab.backends import RosClient
+from compas_fab.robots import PlanningScene
 from compas_fab.robots import Tool
 
 from compas.datastructures import Mesh
@@ -19,9 +20,11 @@ approach_distance = 0.05
 
 with RosClient('localhost') as client:
     robot = client.load_robot()
+    scene = PlanningScene(robot)
 
     # 1. Set tool
     robot.attach_tool(tool)
+    scene.add_attached_tool()
 
     # 2. Define start configuration
     start_configuration = Configuration.from_revolute_values([-5.961, 4.407, -2.265, 5.712, 1.571, -2.820])

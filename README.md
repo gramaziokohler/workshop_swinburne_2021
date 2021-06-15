@@ -136,13 +136,17 @@
   * [Free space motion planning + graphs](examples/312_plan_motion_ros_loader_viz.py)
   * [Constraints](examples/313_constraints.py)
 
-* Planning scene in MoveIt
-  * [Add objects to the scene](examples/314_add_collision_mesh.py)
-  * [Append nested objects to the scene](examples/315_append_collision_meshes.py)
-  * [Remove objects from the scene](examples/316_remove_collision_mesh.py)
+* Planning scene and end-effectors in MoveIt
+  * [Load scene in Grasshopper](examples/314_planning_scene.ghx)
+  * [Add objects to the scene](examples/315_add_collision_mesh.py)
+  * [Append nested objects to the scene](examples/316_append_collision_meshes.py)
+  * [Remove objects from the scene](examples/317_remove_collision_mesh.py)
+  * [Attach tool](examples/410_attach_tool.py)
+  * [Detach tool](examples/411_detach_tool.py)
+  * [Cartesian motion planning with tool](examples/412_plan_cartesian_motion_with_attached_tool.py)
 
-* MoveIt & Grasshopper
-  * [Robot in Grasshopper](examples/317_robot_example.ghx)
+* Pick and Place
+  * [Full example in Grasshopper](examples/413_pick_and_place.ghx)
 
 ## Requirements
 

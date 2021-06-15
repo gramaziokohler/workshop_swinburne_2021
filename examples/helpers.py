@@ -145,7 +145,7 @@ def plan_moving_and_placing_motion(robot, element, start_configuration, toleranc
     frames = [safelevel_target_frame, target_frame]
     frames_tool0 = robot.from_tcf_to_t0cf(frames)
     # as start configuration take last trajectory's end configuration
-    last_configuration = Configuration(moving_trajectory.points[-1].values, moving_trajectory.points[-1].types)
+    last_configuration = Configuration(moving_trajectory.points[-1].joint_values, moving_trajectory.points[-1].types)
 
 
     placing_trajectory = robot.plan_cartesian_motion(frames_tool0,
@@ -284,7 +284,7 @@ def get_last_config(trajectory, robot):
     start_configuration = robot.zero_configuration()
 
     if trajectory and trajectory.points:
-        start_configuration.values = trajectory.points[-1].values
+        start_configuration.joint_values = trajectory.points[-1].joint_values
 
     return start_configuration
 
