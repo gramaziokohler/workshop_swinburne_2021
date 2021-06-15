@@ -93,7 +93,30 @@
   * [Axis angle](examples/119_axis_angle.py)
   * [Quaternions](examples/120_quaternion.py)
 
+### Kinematics and Models
 
+* Robot Model
+  * [Visualize URDF in Rhino](examples/201_visualize_model_rhino.py)
+  * [Visualize URDF with meshes in Rhino](examples/202_visualize_model_with_meshes_rhino.py)
+  * [Load from local files in Rhino](examples/204_robot_from_local_rhino.py)
+  * [Load from Github package](examples/205_robot_from_github.py)
+  * [Load from Github package in Rhino](examples/206_robot_from_github_rhino.py)
+  * [Load and manipulate in Grasshopper](examples/207_robot_artist_grasshopper.ghx)
+  * [Load from ROS](examples/208_robot_from_ros.py)
+  * [Define programmatically](examples/209_define_programmatically.py)
+  * [Build your own model](examples/210_build_your_own_robot.py)
+
+* Configuration
+  * [Joint types](examples/211_joint_types.py)
+  * [Construction and merge](examples/212_configuration.py)
+
+* Kinematics
+  * [Forward Kinematics](examples/213_forward_kinematics.py)
+  * [Forward Kinematics in Rhino](examples/214_forward_kinematics_rhino.py)
+  * [Inverse Kinematics](examples/215_inverse_kinematics.py)
+  * [Inverse Kinematics in Rhino](examples/216_inverse_kinematics_rhino.py)
+  * [Inverse Kinematics in Grasshopper](examples/217_ik.ghx)
+  
 ## Requirements
 
 * Minimum OS: Windows 10 Pro or Mac OS Sierra 10.12
