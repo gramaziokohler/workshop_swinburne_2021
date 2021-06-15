@@ -13,4 +13,4 @@ for key in assembly.nodes():
     e.trajectory = None
 
 # Save assembly
-compas.json_dump(assembly, filename)
+compas.json_dump(assembly, filename, pretty=True)

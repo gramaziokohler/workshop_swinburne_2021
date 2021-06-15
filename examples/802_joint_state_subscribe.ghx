@@ -991,7 +991,7 @@ for name, position in zip(joint_state.name, joint_state.position):
     joint = robot.get_joint_by_name(name)
     for i, jname in enumerate(config.joint_names):
         if jname == joint.name:
-            config.values[i] = position
+            config.joint_values[i] = position
 #    if joint.type in (Joint.CONTINUOUS, Joint.REVOLUTE):
 #        position = math.radians(position)
 #    if joint.type == Joint.PRISMATIC:

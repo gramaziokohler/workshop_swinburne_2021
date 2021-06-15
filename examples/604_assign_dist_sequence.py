@@ -37,4 +37,4 @@ for key1, key2 in combinations(assembly.node, 2):
             assembly.add_edge(key1, key2)
 
 # Save assembly
-compas.json_dump(assembly, filename)
+compas.json_dump(assembly, filename, pretty=True)

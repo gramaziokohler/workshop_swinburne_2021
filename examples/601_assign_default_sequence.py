@@ -18,5 +18,7 @@ for i, key in enumerate(linear_sequence):
     if i < len(linear_sequence) - 1:
         assembly.add_edge(key, linear_sequence[i + 1])
 
+print(linear_sequence)
+
 # Save assembly
-compas.json_dump(assembly, filename)
+compas.json_dump(assembly, filename, pretty=True)

@@ -31,4 +31,4 @@ with RosClient() as client:
     assembly.pick_trajectory = trajectory
 
 # Save assembly
-compas.json_dump(assembly, filename)
+compas.json_dump(assembly, filename, pretty=True)

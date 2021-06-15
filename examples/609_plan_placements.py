@@ -87,4 +87,4 @@ with RosClient() as client:
         built.append(key)
 
         # Save assembly
-        compas.json_dump(assembly, filename)
+        compas.json_dump(assembly, filename, pretty=True)

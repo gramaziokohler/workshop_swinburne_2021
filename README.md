@@ -145,8 +145,79 @@
   * [Detach tool](examples/411_detach_tool.py)
   * [Cartesian motion planning with tool](examples/412_plan_cartesian_motion_with_attached_tool.py)
 
+### Assemblies
+
 * Pick and Place
-  * [Full example in Grasshopper](examples/413_pick_and_place.ghx)
+  * [Simple Pick and Place in Grasshopper](examples/413_pick_and_place.ghx)
+
+* Graphs and Orders
+  * [Linear order](examples/501_linear_order.py)
+  * [Color-mixing lattice](examples/502_color_mixing_lattice.py)
+  * [Color-mixing lattice in Rhino](examples/503_color_mixing_lattice_rhino.py)
+  * [Partial order](examples/504_partial_order.py)
+  * [Network concepts](examples/505_network_concepts.py)
+  * [Using NetworkX](examples/506_networkx.py)
+
+* Assembly models
+  * [Basic model of a network-based assembly class](examples/assembly.py)
+  * [Network-based assembly planner](examples/600_assembly_planner.ghx)
+
+* Sequence assignments
+  * [Default sequence](examples/601_assign_default_sequence.py)
+  * [Linear sorted sequence](examples/602_assign_linear_sequence.py)
+
+* Scripted Assembly Planning
+  * [Plan pick trajectory](examples/608_plan_pick_trajectory.py)
+  * [Plan all brick placements](examples/609_plan_placements.py)
+  * [Clear planning scene](examples/610_clear_planning_scene.py)
+  * [Clear all trajectories](examples/611_clear_all_trajectories.py)
+
+* Assembly visualization
+  * [Grasshopper viewer](examples/620_assembly_viewer.ghx)
+
+* Assembly Design for tomorrow!
+  * [Assembly designs](examples/621_assembly_designs.ghx)
+
+
+### Robot Control with COMPAS RRC
+
+* Communication
+  * [Hello World](examples/701_hello_world.py)
+  * [Send instruction](examples/702_send.py)
+  * [Send instruction with feedback (blocking)](examples/703_send_and_wait.py)
+  * [Send instruction with deferred feedback (non-blocking)](examples/704_send_and_wait_in_the_future.py)
+
+* Basic setup
+  * [Set tool](examples/705_set_tool.py)
+  * [Set work object](examples/706_set_work_object.py)
+  * [Set acceleration](examples/707_set_acceleration.py)
+  * [Set max speed](examples/708_set_max_speed.py)
+
+* Motion instructions
+  * [Get/Move to frame](examples/709_get_and_move_to_frames.py)
+  * [Get/Move to joints (Configuration)](examples/710_get_and_move_to_joints.py)
+  * [Get/Move to Robtarget](examples/711_get_and_move_to_robtarget.py)
+  * [Move to home configuration](examples/712_move_to_home.py)
+
+* Utilities
+  * [No-op/ping](examples/713_no-op.py)
+  * [Print Text on flex pendant](examples/714_print_text.py)
+  * [Wait time](examples/715_wait_time.py)
+  * [Stop/Pause program](examples/716_stop.py)
+  * [Stopwatch on the robot](examples/717_watch.py)
+  * [Custom instruction](examples/718_custom_instruction.py)
+
+* Input/Output signals
+  * [Read analog input](examples/719_input_analog.py)
+  * [Read digital input](examples/720_input_digital.py)
+  * [Read group input](examples/721_input_group.py)
+  * [Set analog output](examples/722_output_analog.py)
+  * [Set digital output](examples/723_output_digital.py)
+  * [Set group output](examples/724_output_group.py)
+  
+* Brick assembly
+  * [Work objects](examples/725_work_objects.py)
+  * [Pick and Place bricks](examples/726_brick_placing.py)
 
 ## Requirements
 
