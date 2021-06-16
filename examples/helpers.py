@@ -299,13 +299,25 @@ def attach_vacuum_gripper(scene):
     scene.add_attached_tool()
 
 
-def add_static_objects(scene):
-    meshes = compas.json_load(os.path.join(HERE, 'static-objects.json'))
+def attach_demo_vacuum_gripper(scene):
+    # create tool from mesh and frame
+    vmesh = Mesh.from_stl(os.path.join(HERE, 'vacuum-gripper-visual.stl'))
+    cmesh = Mesh.from_stl(os.path.join(HERE, 'vacuum-gripper-collision.stl'))
+    frame = Frame([0, 0, -0.04328], [1, 0, 0], [0, 1, 0])
+    tool = Tool(visual=vmesh, frame_in_tool0_frame=frame, collision=cmesh)
+
+    scene.robot.attach_tool(tool)
+    scene.add_attached_tool()
+
+
+def add_static_objects(scene, filename='static-objects.json'):
+    meshes = compas.json_load(os.path.join(HERE, filename))
     scene.remove_collision_mesh('static_objects')
 
     for mesh in meshes:
         cm = CollisionMesh(mesh, 'static_objects')
         scene.append_collision_mesh(cm)
+
 
 def add_built_elements(scene, assembly, built_elements):
     scene.remove_collision_mesh('built_elements')
