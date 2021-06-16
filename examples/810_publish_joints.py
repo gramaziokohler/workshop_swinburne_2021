@@ -20,7 +20,7 @@ if __name__ == '__main__':
     url = 'http://localhost/rw/motionsystem/mechunits/ROB_1/jointtarget?json=1'
 
     with RosClient() as ros:
-        topic = roslibpy.Topic(ros, '/joint_states', 'sensor_msgs/JointState')
+        topic = roslibpy.Topic(ros, '/rob1/joint_states', 'sensor_msgs/JointState')
         topic.advertise()
 
         rate = Rate(10)
