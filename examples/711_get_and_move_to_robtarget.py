@@ -15,14 +15,14 @@ if __name__ == '__main__':
 
     # Set work object
     abb.send(rrc.SetWorkObject('wobj0'))
-    
-    # Get frame and external axes 
+
+    # Get frame and external axes
     frame, external_axes = abb.send_and_wait(rrc.GetRobtarget())
 
     # Print received values
-    print(frame, external_axes)
+    print(repr(frame), external_axes)
 
-    # Change a value of the frame 
+    # Change a value of the frame
     frame.point[0] -= 50
 
     # Set speed [mm/s]
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # Move robot the new pos
     done = abb.send_and_wait(rrc.MoveToRobtarget(frame, external_axes, speed, rrc.Zone.FINE))
 
-    # Print feedback 
+    # Print feedback
     print('Feedback = ', done)
 
     # End of Code
