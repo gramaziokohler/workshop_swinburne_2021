@@ -134,7 +134,7 @@ COMPAS FAB v0.19.1</item>
                     <item name="HideInput" type_name="gh_bool" type_code="1">true</item>
                     <item name="HideOutput" type_name="gh_bool" type_code="1">true</item>
                     <item name="IconOverride" type_name="gh_drawing_bitmap" type_code="37">
-                      <bitmap length="564">iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEQAACxEBf2RfkQAAAdZJREFUSEu1lD2O4kAQRrkBcwP2BnADfARuABEhcAMcEEyCQKuVCCEkY27A3ADCyUAimQyHm/V+r9bNNp5iSLwtPWF/9dvdZRohhP+KK9aJK9aJK9aJKzpk4k08W4XYiB/CYquJPJbX6zVMp9PQbrcV0XhIt9sN6/VaIVZoQLyXMGVC8piYXwp5jMfj0Gq1zK/f7yvUVsdLGnkRBV0RlHT2/g2WHH+KonmJI4PD4ZA6HwVFPd9IR1hTzWZTj76Tcjay1Wr1QWIKnE6n0Ov17DnhXeSiWnTJbvHZ7/d3BkNrg3E2m/2OBbiH4XCITkLg+YhNnMVtakRuib0CWgMMYlMUxetutzPH8vwZ00f+HB8auznHe6CxagDdnMt3ztPOkunAWYsiPcF3YYxGo19ZloXtdvtT78d4b9yDVpEmf8Eg8qiJt7gLCi0WC9v2IxjV6Mu9aU3SAh2MYhI1wZaPBMcZfwadl8n5oqX8Sya7OZkhgSJoge1Xu04pE/Ot3E4hTUQBmyDB+d7ZBIU4f4INBmE+n3/meR4ul8tS2pe4+5e/91CURRjH7BuYIIYCX/vf8fgqaKYFHxEvz6CZh8nBFUGLQl7nN7y4Kq5YJ65YJ65YJ65YH6HxB7b14P1B22tpAAAAAElFTkSuQmCC</bitmap>
+                      <bitmap length="564">iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEAAACxABrSO9dQAAAdZJREFUSEu1lD2O4kAQRrkBcwP2BnADfARuABEhcAMcEEyCQKuVCCEkY27A3ADCyUAimQyHm/V+r9bNNp5iSLwtPWF/9dvdZRohhP+KK9aJK9aJK9aJKzpk4k08W4XYiB/CYquJPJbX6zVMp9PQbrcV0XhIt9sN6/VaIVZoQLyXMGVC8piYXwp5jMfj0Gq1zK/f7yvUVsdLGnkRBV0RlHT2/g2WHH+KonmJI4PD4ZA6HwVFPd9IR1hTzWZTj76Tcjay1Wr1QWIKnE6n0Ov17DnhXeSiWnTJbvHZ7/d3BkNrg3E2m/2OBbiH4XCITkLg+YhNnMVtakRuib0CWgMMYlMUxetutzPH8vwZ00f+HB8auznHe6CxagDdnMt3ztPOkunAWYsiPcF3YYxGo19ZloXtdvtT78d4b9yDVpEmf8Eg8qiJt7gLCi0WC9v2IxjV6Mu9aU3SAh2MYhI1wZaPBMcZfwadl8n5oqX8Sya7OZkhgSJoge1Xu04pE/Ot3E4hTUQBmyDB+d7ZBIU4f4INBmE+n3/meR4ul8tS2pe4+5e/91CURRjH7BuYIIYCX/vf8fgqaKYFHxEvz6CZh8nBFUGLQl7nN7y4Kq5YJ65YJ65YJ65YH6HxB7b14P1B22tpAAAAAElFTkSuQmCC</bitmap>
                     </item>
                     <item name="InputIsPath" type_name="gh_bool" type_code="1">false</item>
                     <item name="InstanceGuid" type_name="gh_guid" type_code="9">66e79dfd-4233-4042-b201-bd93d548c1ac</item>
@@ -378,7 +378,7 @@ class ROSTopicPublish(component):
         key = create_id(self, 'topic')
 
         topic = st.get(key, None)
-        if topic.ros != ros_client:
+        if topic and topic.ros != ros_client:
             del st[key]
             topic = None
 
