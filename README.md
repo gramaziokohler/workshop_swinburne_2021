@@ -16,7 +16,7 @@
 * Assemblies
 * Robot control
 
-👉 [Slides](https://docs.google.com/presentation/d/1q8ZO1cg-EHn0g0nu1sDULYFoRuld-sci59pUsOhEBe0/edit?usp=sharing)
+👉 [Slides](slides.pdf)
 
 ## Examples
 

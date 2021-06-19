@@ -23,6 +23,10 @@ with RosClient() as client:
                                              start_configuration=assembly.attributes['home_config'],
                                              options=dict(max_step=MAX_STEP))
 
+    print("Computed cartesian path with %d configurations, " % len(trajectory.points))
+    print("following %d%% of requested trajectory." % (trajectory.fraction * 100))
+    print("Executing this path at full speed would take approx. %.3f seconds." % trajectory.time_from_start)
+
     if trajectory and trajectory.fraction < 1.0:
         raise Exception('Incomplete trajectory. Fraction={}'.format(trajectory.fraction))
 

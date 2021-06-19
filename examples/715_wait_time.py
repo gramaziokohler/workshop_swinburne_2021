@@ -11,10 +11,10 @@ if __name__ == '__main__':
     print('Connected.')
 
     # Print before
-    abb.send(rrc.PrintText('RRC will wait 1 second'))
+    abb.send(rrc.PrintText('RRC will wait 5 second'))
 
     # Wait time for robot cotroller
-    time = 1.0
+    time = 5.0
     abb.send(rrc.WaitTime(time))
 
     # Print after
